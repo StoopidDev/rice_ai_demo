@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>AI SCAN</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>AI SCAN</h1>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <section class="scan-area">
+
+      <!-- Camera box -->
+      <div class="camera-box">
+        <div id="webcam-container"></div>
+      </div>
+
+      <!-- Info box -->
+      <div class="info-box" id="infoBox">
+        <h2 id="disease-name">-</h2>
+        <p id="confidence">-</p>
+        <p id="disease-desc">-</p>
+      </div>
+
+    </section>
+
+    <button id="startBtn">เริ่มสแกน</button>
+
+  </main>
+
+  <script src="script.js"></script>
+  <footer class="footer">
+  Credit Figma By: ไอเห็ด
+</footer>
+
+</body>
+</html>
