@@ -18,7 +18,7 @@ body {
 
 /* ================= MAIN BACKGROUND ================= */
 .main {
-  min-height: calc(100vh - 120px); /* header + footer */
+  min-height: calc(100vh - 120px);
   background:
     linear-gradient(
       rgba(255,255,255,0.55),
@@ -33,10 +33,9 @@ body {
 }
 
 /* ================= SCAN AREA ================= */
-/* ===== MOBILE FIRST ===== */
 .scan-area {
   display: flex;
-  flex-direction: column;   /* มือถือ: บน-ล่าง */
+  flex-direction: column;
   gap: 16px;
   align-items: center;
 }
@@ -52,7 +51,6 @@ body {
   justify-content: center;
 }
 
-/* Webcam canvas */
 #webcam-container canvas {
   border-radius: 16px;
 }
@@ -66,7 +64,26 @@ body {
   padding: 16px;
   border-radius: 16px;
   display: none;
-  text-align: left;
+}
+
+/* ================= DETAIL BOX ================= */
+.detail-box {
+  width: 90%;
+  max-width: 360px;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 18px;
+  line-height: 1.6;
+  display: none;
+}
+
+.detail-box h2 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.detail-section {
+  margin-top: 12px;
 }
 
 /* ================= BUTTON ================= */
@@ -79,7 +96,14 @@ button {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 160px; /* มือถือกดง่าย */
+}
+
+/* ================= BUTTON GROUP ================= */
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ================= FOOTER ================= */
@@ -91,17 +115,11 @@ button {
   font-size: 14px;
 }
 
-/* ================================================= */
-/* ================= DESKTOP VIEW ================== */
-/* ================================================= */
+/* ================= DESKTOP ================= */
 @media (min-width: 768px) {
 
-  .header {
-    font-size: 18px;
-  }
-
   .scan-area {
-    flex-direction: row;    /* desktop: ซ้าย-ขวา */
+    flex-direction: row;
     gap: 24px;
   }
 
@@ -114,18 +132,7 @@ button {
     width: 220px;
   }
 
-  button {
-    width: auto;
+  .detail-box {
+    width: 320px;
   }
-
-  .footer {
-    font-size: 14px;
-  }
-}
-/* กลุ่มปุ่ม */
-.button-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
 }

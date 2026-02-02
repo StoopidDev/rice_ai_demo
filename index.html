@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>AI SCAN</title>
 
+  <!-- TensorFlow + Teachable Machine -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
@@ -19,19 +20,36 @@
 
     <section class="scan-area">
 
+      <!-- Camera -->
       <div class="camera-box">
         <div id="webcam-container"></div>
       </div>
 
+      <!-- Result box -->
       <div class="info-box" id="infoBox">
         <h2 id="disease-name">-</h2>
         <p id="confidence">-</p>
         <p id="disease-desc">-</p>
       </div>
 
+      <!-- Detail box (พื้นที่ที่มึงวงไว้) -->
+      <div class="detail-box" id="detailBox">
+        <h2 id="detail-title">ข้อมูลโรค</h2>
+
+        <p class="detail-section">
+          <strong>ลักษณะอาการ:</strong><br>
+          <span id="detail-symptom">-</span>
+        </p>
+
+        <p class="detail-section">
+          <strong>วิธีป้องกัน / รักษา:</strong><br>
+          <span id="detail-prevent">-</span>
+        </p>
+      </div>
+
     </section>
 
-    <!-- กลุ่มปุ่ม -->
+    <!-- Buttons -->
     <div class="button-group">
       <button id="startBtn">เริ่มสแกน</button>
       <button id="switchBtn" style="display:none;">สลับกล้อง</button>
@@ -40,7 +58,7 @@
   </main>
 
   <footer class="footer">
-    Credit Figma By: ไอเห็ด
+    โปรเจค บาย: skdoosh
   </footer>
 
   <script src="script.js"></script>
