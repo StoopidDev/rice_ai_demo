@@ -8,6 +8,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
+  <!-- สำคัญมากสำหรับมือถือ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,14 +28,13 @@
         <div id="webcam-container"></div>
       </div>
 
-      <!-- Result box -->
+      <!-- Result -->
       <div class="info-box" id="infoBox">
         <h2 id="disease-name">-</h2>
         <p id="confidence">-</p>
-        <p id="disease-desc">-</p>
       </div>
 
-      <!-- Detail box (พื้นที่ที่มึงวงไว้) -->
+      <!-- Detail -->
       <div class="detail-box" id="detailBox">
         <h2 id="detail-title">ข้อมูลโรค</h2>
 
@@ -49,7 +51,6 @@
 
     </section>
 
-    <!-- Buttons -->
     <div class="button-group">
       <button id="startBtn">เริ่มสแกน</button>
       <button id="switchBtn" style="display:none;">สลับกล้อง</button>
@@ -58,7 +59,7 @@
   </main>
 
   <footer class="footer">
-    โปรเจค บาย: skdoosh
+    โปรเจค บาย: Skadoosh
   </footer>
 
   <script src="script.js"></script>

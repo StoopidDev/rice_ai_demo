@@ -1,4 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/uAwE3C3fU/";
+const URL = "https://teachablemachine.withgoogle.com/models/3Gtih2Qey/";
 
 let model, webcam;
 let currentFacingMode = "environment";

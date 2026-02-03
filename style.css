@@ -7,22 +7,26 @@ body {
   font-family: sans-serif;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 .header {
   background: #2e7d32;
   color: white;
   text-align: center;
-  padding: 12px;
-  font-size: 16px;
+  padding: 14px;
 }
 
-/* ================= MAIN BACKGROUND ================= */
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ===== MAIN BACKGROUND ===== */
 .main {
   min-height: calc(100vh - 120px);
   background:
     linear-gradient(
-      rgba(255,255,255,0.55),
-      rgba(255,255,255,0.55)
+      rgba(255,255,255,0.65),
+      rgba(255,255,255,0.65)
     ),
     url("bg-rice2.jpg") center / cover no-repeat;
 
@@ -32,48 +36,56 @@ body {
   justify-content: center;
 }
 
-/* ================= SCAN AREA ================= */
+/* ===== SCAN AREA ===== */
 .scan-area {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   align-items: center;
+  padding: 0 16px;
 }
 
-/* ================= CAMERA BOX ================= */
+/* ===== CAMERA BOX ===== */
 .camera-box {
-  width: 220px;
-  height: 220px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 16px;
+  width: 85vw;
+  height: 85vw;
+  max-width: 320px;
+  max-height: 320px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #webcam-container canvas {
-  border-radius: 16px;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 18px;
 }
 
-/* ================= INFO BOX ================= */
+/* ===== INFO BOX ===== */
 .info-box {
-  width: 90%;
-  max-width: 320px;
+  width: 100%;
+  max-width: 360px;
   background: #4CAF50;
   color: white;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 18px;
+  font-size: 16px;
   display: none;
 }
 
-/* ================= DETAIL BOX ================= */
+/* ===== DETAIL BOX ===== */
 .detail-box {
-  width: 90%;
+  width: 100%;
   max-width: 360px;
-  background: rgba(255,255,255,0.9);
-  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  padding: 18px;
   border-radius: 18px;
   line-height: 1.6;
+  font-size: 16px;
   display: none;
 }
 
@@ -86,27 +98,26 @@ body {
   margin-top: 12px;
 }
 
-/* ================= BUTTON ================= */
-button {
-  margin-top: 20px;
-  padding: 10px 28px;
-  font-size: 16px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-/* ================= BUTTON GROUP ================= */
+/* ===== BUTTON ===== */
 .button-group {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+  margin-top: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ================= FOOTER ================= */
+button {
+  padding: 12px 32px;
+  font-size: 18px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
 .footer {
   background: #2e7d32;
   color: white;
@@ -115,12 +126,12 @@ button {
   font-size: 14px;
 }
 
-/* ================= DESKTOP ================= */
+/* ===== DESKTOP ONLY ===== */
 @media (min-width: 768px) {
-
   .scan-area {
     flex-direction: row;
     gap: 24px;
+    justify-content: center;
   }
 
   .camera-box {
@@ -129,10 +140,10 @@ button {
   }
 
   .info-box {
-    width: 220px;
+    width: 240px;
   }
 
   .detail-box {
-    width: 320px;
+    width: 340px;
   }
 }
